@@ -2,7 +2,10 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 
 	$routeProvider
 
-		// home page
+		.when('/', {
+			templateUrl: 'views/hw0.html'
+		})
+
 		.when('/eliza', {
 			templateUrl: 'views/home.html',
 			controller: 'MainController'
@@ -11,6 +14,10 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 		.when('/eliza/DOCTOR', {
 			templateUrl: 'views/doctor.html',
 			controller: 'MainController'
+		})
+
+		.when('/hw1.yml', {
+			templateUrl: 'hw1.yml'
 		})
 
 		.otherwise({

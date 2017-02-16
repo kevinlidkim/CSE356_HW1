@@ -1,0 +1,19 @@
+- hosts: localhost
+  sudo: yes
+
+  vars:
+    - homeDir: /home/root
+    - appDir : CSE356_HW1
+
+  tasks:
+  - name: Stop APP
+    sudo_user: root
+    command: pm2 stop app chdir={{homeDir}}/{{appDir}}
+    ignore_errors: yes
+    register: npm_finished
+
+  - name: Start APP
+    sudo_user: root
+    command: pm2 start app.js --name app chdir={{homeDir}}/{{appDir}}
+    ignore_errors: yes
+    when: npm_finished

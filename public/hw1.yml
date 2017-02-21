@@ -24,10 +24,6 @@
     sudo_user: root
     apt: name=nodejs update_cache=yes state=latest
 
-  - name: Install npm
-    sudo_user: root
-    apt: pkg=npm update_cache=yes state=latest
-
   - name: Install pm2
     npm: name=pm2 global=yes production=yes
 

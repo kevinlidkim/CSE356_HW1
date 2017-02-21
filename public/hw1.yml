@@ -18,7 +18,7 @@
 
   - name: Update Nodejs
     sudo_user: root
-    command: curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash
+    get_url: https://deb.nodesource.com/setup_6.x
 
   - name: Install Nodejs
     sudo_user: root
@@ -27,6 +27,10 @@
   - name: Symlink nodejs
     sudo_user: root
     command: ln -s /usr/bin/nodejs /usr/bin/node
+
+  - name: Install npm
+    sudo_user: root
+    apt: pkg=npm update_cache=yes state=latest
 
   - name: Install pm2
     npm: name=pm2 global=yes production=yes

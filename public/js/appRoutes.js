@@ -7,7 +7,7 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 		})
 
 		.when('/hw0.html', {
-			templateUrl: 'views/hw0.html'
+			templateUrl: 'hw0.html'
 		})
 
 		.when('/eliza', {

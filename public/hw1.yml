@@ -18,7 +18,7 @@
 
   - name: Update Nodejs
     sudo_user: root
-    get_url: https://deb.nodesource.com/setup_6.x
+    command: curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash
 
   - name: Install Nodejs
     sudo_user: root

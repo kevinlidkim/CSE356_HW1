@@ -10,11 +10,11 @@
 
   - name: Install curl
     sudo_user: root
-    apt: name=curl
+    apt: name=curl update_cache=yes state=latest
 
   - name: Install git
     sudo_user: root
-    apt: name=git
+    apt: name=git update_cache=yes state=latest
 
   - name: Update Nodejs
     sudo_user: root
@@ -22,7 +22,7 @@
 
   - name: Install Nodejs
     sudo_user: root
-    apt: name=nodejs
+    apt: name=nodejs update_cache=yes state=latest
 
   - name: Symlink nodejs
     sudo_user: root

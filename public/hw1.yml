@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: hw1
   sudo: yes
 
   vars:

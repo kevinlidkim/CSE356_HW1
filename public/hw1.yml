@@ -24,10 +24,6 @@
     sudo_user: root
     apt: name=nodejs update_cache=yes state=latest
 
-  - name: Symlink nodejs
-    sudo_user: root
-    shell: ln -s /usr/bin/nodejs /usr/bin/node
-
   - name: Install npm
     sudo_user: root
     apt: pkg=npm update_cache=yes state=latest
